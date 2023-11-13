@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  background-color: var(--bg-navbar-hover);
+  background-color: var(--bg);
   padding: 0.625rem;
   border-radius: 0.625rem;
 }
