@@ -9,5 +9,5 @@
 
 .container:hover,
 .active {
-  background-color: var(--bg-sidebar-hover);
+  background-color: var(--bg-navbar-hover);
 }

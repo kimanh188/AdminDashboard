@@ -5,11 +5,11 @@
 }
 
 :root {
-  --bg: #395144;
-  --bgSoft: #4e6c50;
-  --text: #f0ebce;
-  --textSoft: #b0a695;
-  --bg-sidebar-hover: #79ac78;
+  --bg: #192655;
+  --bgSoft: #3876bf;
+  --text: #f3f0ca;
+  --textSoft: #f3f3f3;
+  --bg-navbar-hover: #1f4172;
 }
 
 body {

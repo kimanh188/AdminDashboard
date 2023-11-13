@@ -77,7 +77,7 @@ const menuItems = [
   },
 ];
 
-export function Sidebar() {
+const Sidebar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.user}>
@@ -96,7 +96,7 @@ export function Sidebar() {
 
       <ul className={styles.list}>
         {menuItems.map((category) => (
-          <li key={category.title}>
+          <li key={category.title} className={styles.listItem}>
             <span className={styles.category}>{category.title}</span>
             {category.list.map((item) => (
               <MenuPath item={item} key={item.subtitle} />
@@ -104,6 +104,13 @@ export function Sidebar() {
           </li>
         ))}
       </ul>
+
+      <button className={styles.logout}>
+        <MdLogout />
+        Logout
+      </button>
     </div>
   );
-}
+};
+
+export default Sidebar;
