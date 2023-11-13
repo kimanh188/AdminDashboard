@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 1.875rem;
+  color: var(--textSoft);
+}
+
+.text {
+  font-size: 0.75rem;
+}
