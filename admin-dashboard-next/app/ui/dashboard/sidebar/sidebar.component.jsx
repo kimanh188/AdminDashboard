@@ -1,3 +1,5 @@
+import Image from "next/image.js";
+import MenuPath from "./menuPath/menuPath.jsx";
 import styles from "./sidebar.module.css";
 import {
   MdDashboard,
@@ -17,22 +19,22 @@ const menuItems = [
     title: "Pages",
     list: [
       {
-        title: "Dashboard",
+        subtitle: "Dashboard",
         path: "/dashboard",
         icon: <MdDashboard />,
       },
       {
-        title: "Users",
+        subtitle: "Users",
         path: "/dashboard/users",
         icon: <MdSupervisedUserCircle />,
       },
       {
-        title: "Products",
+        subtitle: "Products",
         path: "/dashboard/products",
         icon: <MdShoppingBag />,
       },
       {
-        title: "Transactions",
+        subtitle: "Transactions",
         path: "/dashboard/transactions",
         icon: <MdAttachMoney />,
       },
@@ -42,17 +44,17 @@ const menuItems = [
     title: "Analytics",
     list: [
       {
-        title: "Revenue",
+        subtitle: "Revenue",
         path: "/dashboard/revenue",
         icon: <MdWork />,
       },
       {
-        title: "Reports",
+        subtitle: "Reports",
         path: "/dashboard/reports",
         icon: <MdAnalytics />,
       },
       {
-        title: "Teams",
+        subtitle: "Teams",
         path: "/dashboard/teams",
         icon: <MdPeople />,
       },
@@ -62,12 +64,12 @@ const menuItems = [
     title: "User",
     list: [
       {
-        title: "Settings",
+        subtitle: "Settings",
         path: "/dashboard/settings",
         icon: <MdOutlineSettings />,
       },
       {
-        title: "Help",
+        subtitle: "Help",
         path: "/dashboard/help",
         icon: <MdHelpCenter />,
       },
@@ -78,9 +80,30 @@ const menuItems = [
 export function Sidebar() {
   return (
     <div className={styles.container}>
-      {menuItems.map((category) => (
-        <li>{category.title}</li>
-      ))}
+      <div className={styles.user}>
+        <Image
+          className={styles.userImg}
+          src="/noavatar.png"
+          alt="no-avatar"
+          width="50"
+          height="50"
+        />
+        <div className={styles.userDetail}>
+          <span className={styles.username}>Brian Brown</span>
+          <span className={styles.userRole}>Administrator</span>
+        </div>
+      </div>
+
+      <ul className={styles.list}>
+        {menuItems.map((category) => (
+          <li key={category.title}>
+            <span className={styles.category}>{category.title}</span>
+            {category.list.map((item) => (
+              <MenuPath item={item} key={item.subtitle} />
+            ))}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

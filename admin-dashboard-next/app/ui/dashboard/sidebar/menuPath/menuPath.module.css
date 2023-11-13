@@ -1,0 +1,13 @@
+.container {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+
+.container:hover,
+.active {
+  background-color: var(--bg-sidebar-hover);
+}
