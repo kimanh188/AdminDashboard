@@ -1,7 +1,7 @@
-import Navbar from "../ui/dashboard/navbar/navbar.jsx";
-import Sidebar from "../ui/dashboard/sidebar/sidebar.jsx";
+import Navbar from "../ui/dashboard/navbarComponent/navbar.jsx";
+import Sidebar from "../ui/dashboard/sidebarComponent/sidebar.jsx";
 import styles from "../ui/dashboard/dashboard.module.css";
-import Footer from "../ui/footer/footer.jsx";
+import Footer from "../ui/dashboard/footerComponent/footer.jsx";
 
 const Layout = ({ children }) => {
   return (

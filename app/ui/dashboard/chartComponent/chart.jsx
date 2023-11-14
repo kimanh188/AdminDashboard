@@ -12,11 +12,6 @@ import styles from "./chart.module.css";
 
 const data = [
   {
-    name: "Sun",
-    visit: 2504,
-    click: 1390,
-  },
-  {
     name: "Mon",
     visit: 1984,
     click: 1560,
@@ -45,6 +40,11 @@ const data = [
     name: "Sat",
     visit: 3265,
     click: 3500,
+  },
+  {
+    name: "Sun",
+    visit: 2504,
+    click: 1390,
   },
 ];
 

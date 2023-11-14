@@ -37,13 +37,13 @@
 }
 
 .pending {
-  background-color: #cfb997;
+  background-color: var(--yellow);
 }
 
 .done {
-  background-color: #186f65;
+  background-color: var(--green);
 }
 
 .cancelled {
-  background-color: #b2533e;
+  background-color: var(--red);
 }

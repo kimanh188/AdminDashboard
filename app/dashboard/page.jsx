@@ -1,7 +1,7 @@
-import Card from "../ui/dashboard/card/card.jsx";
+import Card from "../ui/dashboard/cardComponent/card.jsx";
 import Transactions from "../ui/dashboard/transactions/transactions.jsx";
-import Chart from "../ui/dashboard/chart/chart.jsx";
-import NewsSidebar from "../ui/dashboard/news-sidebar-right/newsSidebar.jsx";
+import Chart from "../ui/dashboard/chartComponent/chart.jsx";
+import NewsSidebar from "../ui/dashboard/news-sidebarComponent/newsSidebar.jsx";
 import styles from "../ui/dashboard/dashboard.module.css";
 
 const DashboardPage = () => {

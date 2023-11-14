@@ -1,0 +1,62 @@
+.container {
+  background-color: var(--bgSoft);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addButton {
+  padding: 0.625rem;
+  background-color: var(--btn-add);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.table td {
+  padding: 0.625rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.userImg {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+}
+
+.view {
+  background-color: var(--green);
+}
+
+.delete {
+  background-color: var(--red);
+}
