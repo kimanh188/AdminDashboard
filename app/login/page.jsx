@@ -1,5 +1,12 @@
+import styles from "@/app/ui/login/login.module.css";
+import LoginForm from "../ui/login/loginFormComponent/loginForm.jsx";
+
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return (
+    <div className={styles.container}>
+      <LoginForm />
+    </div>
+  );
 };
 
 export default LoginPage;

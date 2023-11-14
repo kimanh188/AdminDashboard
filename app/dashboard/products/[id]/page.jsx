@@ -21,7 +21,7 @@ const ViewProductDetailPage = () => {
           <label>Color</label>
           <input type="text" name="color" placeholder="color" />
           <label>Size</label>
-          <textarea type="text" name="size" placeholder="size" />
+          <input type="text" name="size" placeholder="size" />
           <label>Category</label>
           <select name="category" id="category">
             <option value="phone">Phone</option>
