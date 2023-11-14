@@ -30,7 +30,7 @@ const ProductsPage = () => {
               <div className={styles.product}>
                 <Image
                   src="/noproduct.jpg"
-                  alt=""
+                  alt="no product symbol"
                   width={40}
                   height={40}
                   className={styles.productImg}
@@ -44,7 +44,7 @@ const ProductsPage = () => {
             <td>39</td>
             <td>
               <div className={styles.buttonGroup}>
-                <Link href={"/dashboard/products/"}>
+                <Link href={"/dashboard/products/test"}>
                   <button className={`${styles.button} ${styles.view}`}>
                     View
                   </button>

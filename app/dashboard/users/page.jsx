@@ -44,17 +44,15 @@ const UsersPage = () => {
             <td>active</td>
             <td>
               <div className={styles.buttonGroup}>
-                <Link href="/">
+                <Link href="/dashboard/users/test">
                   <button className={`${styles.button} ${styles.view}`}>
                     View
                   </button>
                 </Link>
-                {/* <form action={deleteUser}>
-                  <input type="hidden" name="id" value={user.id} /> */}
+
                 <button className={`${styles.button} ${styles.delete}`}>
                   Delete
                 </button>
-                {/*  </form> */}
               </div>
             </td>
           </tr>
