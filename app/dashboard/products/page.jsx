@@ -30,37 +30,39 @@ const ProductsPage = async () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <div className={styles.product}>
-                <Image
-                  src="/noproduct.jpg"
-                  alt="no product symbol"
-                  width={40}
-                  height={40}
-                  className={styles.productImg}
-                />
-                Iphone
-              </div>
-            </td>
-            <td>Lorem ipsum dolor sit amet consectetur.</td>
-            <td>$1.300</td>
-            <td>14.11.2023</td>
-            <td>39</td>
-            <td>
-              <div className={styles.buttonGroup}>
-                <Link href={"/dashboard/products/test"}>
-                  <button className={`${styles.button} ${styles.view}`}>
-                    View
-                  </button>
-                </Link>
+          {products.map((product) => (
+            <tr key={product.id}>
+              <td>
+                <div className={styles.product}>
+                  <Image
+                    src="/noproduct.jpg"
+                    alt="no product symbol"
+                    width={40}
+                    height={40}
+                    className={styles.productImg}
+                  />
+                  {product.title}
+                </div>
+              </td>
+              <td>{product.desc}</td>
+              <td>${product.price}</td>
+              <td>{product.createdAt?.toString().slice(4, 15)}</td>
+              <td>{product.stock}</td>
+              <td>
+                <div className={styles.buttonGroup}>
+                  <Link href={`/dashboard/products/${product.id}`}>
+                    <button className={`${styles.button} ${styles.view}`}>
+                      View
+                    </button>
+                  </Link>
 
-                <button className={`${styles.button} ${styles.delete}`}>
-                  Delete
-                </button>
-              </div>
-            </td>
-          </tr>
+                  <button className={`${styles.button} ${styles.delete}`}>
+                    Delete
+                  </button>
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
       <Pagination />

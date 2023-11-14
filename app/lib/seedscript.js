@@ -15,8 +15,8 @@ async function createUsersData(docsToCreate) {
       email: faker.internet.email(),
       password: faker.internet.password({ length: 8 }),
       img: faker.image.url(),
-      isAdmin: faker.datatype.boolean({ probability: 0.9 }),
-      isActive: faker.datatype.boolean({ probability: 0.1 }),
+      isAdmin: faker.datatype.boolean({ probability: 0.1 }),
+      isActive: faker.datatype.boolean({ probability: 0.9 }),
       phone: faker.phone.number(),
       address: faker.location.city(),
     });
