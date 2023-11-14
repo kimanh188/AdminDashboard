@@ -2,9 +2,14 @@ import Link from "next/link.js";
 import Image from "next/image.js";
 import Search from "@/app/ui/dashboard/searchComponent/search.jsx";
 import Pagination from "@/app/ui/dashboard/paginationComponent/pagination.jsx";
+import { fetchProducts } from "@/app/data/fetchProducts.js";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 
-const ProductsPage = () => {
+const ProductsPage = async () => {
+  const products = await fetchProducts();
+
+  console.log(products);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>

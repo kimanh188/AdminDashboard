@@ -1,10 +1,15 @@
 import Link from "next/link.js";
 import Image from "next/image.js";
+import { fetchUsers } from "@/app/data/fetchUsers.js";
 import Search from "@/app/ui/dashboard/searchComponent/search.jsx";
 import Pagination from "@/app/ui/dashboard/paginationComponent/pagination.jsx";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 
-const UsersPage = () => {
+const UsersPage = async () => {
+  const users = await fetchUsers();
+
+  console.log(users);
+
   return (
     <div className={styles.container}>
       <div className={styles.topBar}>
