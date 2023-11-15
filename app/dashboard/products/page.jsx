@@ -5,10 +5,13 @@ import Pagination from "@/app/ui/dashboard/paginationComponent/pagination.jsx";
 import { fetchProducts } from "@/app/data/fetchProducts.js";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 
-const ProductsPage = async () => {
-  const products = await fetchProducts();
+const ProductsPage = async ({ searchParams }) => {
+  const query = searchParams?.q || "";
+  //console.log(query);
 
-  console.log(products);
+  const products = await fetchProducts(query);
+
+  //console.log(products);
 
   return (
     <div className={styles.container}>

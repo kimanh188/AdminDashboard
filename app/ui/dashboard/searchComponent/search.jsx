@@ -1,28 +1,28 @@
 "use client";
 
-/* import { usePathname, useRouter, useSearchParams } from "next/navigation"; */
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { MdSearch } from "react-icons/md";
-/* import { useDebouncedCallback } from "use-debounce"; */
+import { useDebouncedCallback } from "use-debounce";
 import styles from "./search.module.css";
 
 const Search = ({ placeholder }) => {
-  /*  const searchParams = useSearchParams();
-  const { replace } = useRouter();
+  const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const handleSearch = useDebouncedCallback((e) => {
+  const searchHandler = useDebouncedCallback((e) => {
     const params = new URLSearchParams(searchParams);
 
-    params.set("page", 1);
-
+    //if searched value exist then set params, if not then delete query
     if (e.target.value) {
-      e.target.value.length > 2 && params.set("q", e.target.value);
+      params.set("q", e.target.value);
     } else {
       params.delete("q");
     }
-    replace(`${pathname}?${params}`);
-  }, 300);
- */
+
+    router.replace(`${pathname}?${params}`);
+  }, 500);
+
   return (
     <div className={styles.container}>
       <MdSearch />
@@ -30,7 +30,7 @@ const Search = ({ placeholder }) => {
         type="text"
         placeholder={placeholder}
         className={styles.input}
-        /* onChange={handleSearch} */
+        onChange={searchHandler}
       />
     </div>
   );

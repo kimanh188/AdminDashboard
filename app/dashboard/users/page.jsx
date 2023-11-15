@@ -5,10 +5,13 @@ import Search from "@/app/ui/dashboard/searchComponent/search.jsx";
 import Pagination from "@/app/ui/dashboard/paginationComponent/pagination.jsx";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 
-const UsersPage = async () => {
-  const users = await fetchUsers();
+const UsersPage = async ({ searchParams }) => {
+  const query = searchParams?.q || "";
+  //console.log(query);
 
-  console.log(users);
+  const users = await fetchUsers(query);
+
+  //console.log(users);
 
   return (
     <div className={styles.container}>

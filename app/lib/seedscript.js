@@ -40,7 +40,7 @@ async function createProductsData(docsToCreate) {
 }
 
 try {
-  await createUsersData(5);
+  //await createUsersData(5);
   await createProductsData(5);
   console.log("Created documents");
 } catch (error) {
