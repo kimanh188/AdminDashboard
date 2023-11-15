@@ -1,9 +1,10 @@
+import { addUser } from "@/app/actions/userActions.js";
 import styles from "@/app/ui/dashboard/users/addUser/addUser.module.css";
 
 const AddUserPage = () => {
   return (
     <div className={styles.container}>
-      <form className={styles.form}>
+      <form action={addUser} className={styles.form}>
         <input type="text" placeholder="Username" name="username" required />
         <input type="email" placeholder="E-mail" name="email" required />
         <input
