@@ -40,4 +40,22 @@ export const { signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  // Add infos (username & img instead of user's email) to session
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.username = user.username;
+        token.img = user.img;
+      }
+      return token;
+    },
+
+    async session({ session, token }) {
+      if (token) {
+        session.user.username = token.username;
+        session.user.img = token.img;
+      }
+      return session;
+    },
+  },
 });

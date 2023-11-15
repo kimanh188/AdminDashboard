@@ -1,5 +1,6 @@
 import Image from "next/image.js";
 import MenuPath from "./menuPath/menuPath.jsx";
+import { auth } from "@/app/auth.js";
 import styles from "./sidebar.module.css";
 import {
   MdDashboard,
@@ -77,7 +78,10 @@ const menuItems = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = async () => {
+  const session = await auth();
+  console.log(session);
+
   return (
     <div className={styles.container}>
       <div className={styles.user}>
