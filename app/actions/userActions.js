@@ -1,5 +1,7 @@
 "use server";
 
+import { revalidatePath } from "next/cache.js";
+import { redirect } from "next/navigation.js";
 import { mongoConnect } from "../config/db.connect.js";
 import { UserModel } from "../models/users.model.js";
 
@@ -25,4 +27,7 @@ export const addUser = async (formAddNewUser) => {
     console.log(`Failed to create user `, error);
     throw new Error("Failed to create user");
   }
+
+  revalidatePath("/dashboard/users/");
+  redirect("/dashboard/users/");
 };

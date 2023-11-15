@@ -12,9 +12,10 @@ export const fetchUsers = async (query, page) => {
       username: { $regex: regex },
     }).count();
 
-    const users = await UserModel.find({ username: { $regex: regex } })
+    const users = await UserModel.find({ username: { $regex: regex } }) //find users whose username matches the regular expression
+      .sort({ createdAt: -1 }) // Sort (newest first)
       .limit(resultPerPage)
-      .skip(resultPerPage * (page - 1)); //find users whose username matches the regular expression
+      .skip(resultPerPage * (page - 1));
     return { countTotal, users };
   } catch (error) {
     console.log(`Failed to fetch users: `, error);

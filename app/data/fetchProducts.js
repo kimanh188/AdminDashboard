@@ -15,6 +15,7 @@ export const fetchProducts = async (query, page) => {
     const products = await ProductModel.find({
       title: { $regex: regex },
     })
+      .sort({ createdAt: +1 }) //sort: oldest first
       .limit(resultPerPage)
       .skip(resultPerPage * (page - 1));
     return { countTotal, products };
