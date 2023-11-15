@@ -1,14 +1,24 @@
 import { mongoConnect } from "../config/db.connect.js";
 import { ProductModel } from "../models/products.model.js";
 
-export const fetchProducts = async (query) => {
+export const fetchProducts = async (query, page) => {
   const regex = new RegExp(query, "i");
+
+  const resultPerPage = 5;
 
   try {
     mongoConnect();
-    const products = await ProductModel.find({ title: { $regex: regex } });
-    return products;
+    const countTotal = await ProductModel.find({
+      title: { $regex: regex },
+    }).count();
+
+    const products = await ProductModel.find({
+      title: { $regex: regex },
+    })
+      .limit(resultPerPage)
+      .skip(resultPerPage * (page - 1));
+    return { countTotal, products };
   } catch (error) {
-    console.log(error);
+    console.log(`Failed to fetch products: `, error);
   }
 };

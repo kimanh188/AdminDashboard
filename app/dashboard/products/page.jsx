@@ -9,7 +9,9 @@ const ProductsPage = async ({ searchParams }) => {
   const query = searchParams?.q || "";
   //console.log(query);
 
-  const products = await fetchProducts(query);
+  const page = searchParams?.page || 1;
+
+  const { countTotal, products } = await fetchProducts(query, page);
 
   //console.log(products);
 
@@ -68,7 +70,7 @@ const ProductsPage = async ({ searchParams }) => {
           ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination count={countTotal} />
     </div>
   );
 };
