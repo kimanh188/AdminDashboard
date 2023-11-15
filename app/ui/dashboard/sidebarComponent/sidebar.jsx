@@ -1,6 +1,6 @@
 import Image from "next/image.js";
 import MenuPath from "./menuPath/menuPath.jsx";
-import { auth } from "@/app/auth.js";
+import { auth, signOut } from "@/app/auth.js";
 import styles from "./sidebar.module.css";
 import {
   MdDashboard,
@@ -109,10 +109,17 @@ const Sidebar = async () => {
         ))}
       </ul>
 
-      <button className={styles.logout}>
-        <MdLogout />
-        Logout
-      </button>
+      <form
+        action={async () => {
+          "use server";
+          await signOut();
+        }}
+      >
+        <button className={styles.logout}>
+          <MdLogout />
+          Logout
+        </button>
+      </form>
     </div>
   );
 };
