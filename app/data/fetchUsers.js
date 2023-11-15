@@ -19,5 +19,19 @@ export const fetchUsers = async (query, page) => {
     return { countTotal, users };
   } catch (error) {
     console.log(`Failed to fetch users: `, error);
+    throw new Error("Failed to fetch users");
+  }
+};
+
+export const fetchSingleUser = async (id) => {
+  console.log(id);
+
+  try {
+    mongoConnect();
+    const user = await UserModel.findById(id);
+    return user;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Failed to fetch the user");
   }
 };

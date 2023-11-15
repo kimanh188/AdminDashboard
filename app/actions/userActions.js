@@ -36,3 +36,49 @@ export const addUser = async (formAddNewUser) => {
   revalidatePath("/dashboard/users/");
   redirect("/dashboard/users/");
 };
+
+export const updateUser = async (formUserDetail) => {
+  const { id, username, email, password, phone, address, isAdmin, isActive } =
+    Object.fromEntries(formUserDetail);
+
+  try {
+    mongoConnect();
+
+    const updateFields = {
+      username,
+      email,
+      password,
+      phone,
+      address,
+      isAdmin,
+      isActive,
+    };
+
+    Object.keys(updateFields).forEach(
+      (key) =>
+        (updateFields[key] === "" || undefined) && delete updateFields[key]
+    );
+
+    await UserModel.findByIdAndUpdate(id, updateFields);
+  } catch (error) {
+    console.log(error);
+    throw new Error("Failed to update user");
+  }
+
+  revalidatePath("/dashboard/users");
+  redirect("/dashboard/users");
+};
+
+export const deleteUser = async (formDeleteUser) => {
+  const { userId } = Object.fromEntries(formDeleteUser);
+
+  try {
+    mongoConnect();
+    await UserModel.findByIdAndDelete(userId);
+  } catch (error) {
+    console.log(error);
+    throw new Error("Failed to delete user");
+  }
+
+  revalidatePath("/dashboard/products");
+};

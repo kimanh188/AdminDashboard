@@ -3,6 +3,7 @@ import Image from "next/image.js";
 import { fetchUsers } from "@/app/data/fetchUsers.js";
 import Search from "@/app/ui/dashboard/searchComponent/search.jsx";
 import Pagination from "@/app/ui/dashboard/paginationComponent/pagination.jsx";
+import { deleteUser } from "@/app/actions/userActions.js";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 
 const UsersPage = async ({ searchParams }) => {
@@ -61,9 +62,12 @@ const UsersPage = async ({ searchParams }) => {
                     </button>
                   </Link>
 
-                  <button className={`${styles.button} ${styles.delete}`}>
-                    Delete
-                  </button>
+                  <form action={deleteUser}>
+                    <input type="hidden" name="userId" value={user.id} />
+                    <button className={`${styles.button} ${styles.delete}`}>
+                      Delete
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>

@@ -21,5 +21,17 @@ export const fetchProducts = async (query, page) => {
     return { countTotal, products };
   } catch (error) {
     console.log(`Failed to fetch products: `, error);
+    throw new Error("Failed to fetch products");
+  }
+};
+
+export const fetchSingleProduct = async (id) => {
+  try {
+    mongoConnect();
+    const product = await ProductModel.findById(id);
+    return product;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Failed to fetch the product");
   }
 };
