@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { fetchSingleUser } from "@/app/data/fetchUsers.js";
-import { updateUser } from "@/app/actions/userActions.js";
+import { updateUser } from "@/app/serverActions/userActions.js";
 import styles from "@/app/ui/dashboard/users/viewUserDetail/viewUser.module.css";
 
 const ViewUserDetailPage = async ({ params }) => {

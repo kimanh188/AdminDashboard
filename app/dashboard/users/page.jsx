@@ -3,7 +3,7 @@ import Image from "next/image.js";
 import { fetchUsers } from "@/app/data/fetchUsers.js";
 import Search from "@/app/ui/dashboard/searchComponent/search.jsx";
 import Pagination from "@/app/ui/dashboard/paginationComponent/pagination.jsx";
-import { deleteUser } from "@/app/actions/userActions.js";
+import { deleteUser } from "@/app/serverActions/userActions.js";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 
 const UsersPage = async ({ searchParams }) => {

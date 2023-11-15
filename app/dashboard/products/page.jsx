@@ -3,7 +3,7 @@ import Image from "next/image.js";
 import Search from "@/app/ui/dashboard/searchComponent/search.jsx";
 import Pagination from "@/app/ui/dashboard/paginationComponent/pagination.jsx";
 import { fetchProducts } from "@/app/data/fetchProducts.js";
-import { deleteProduct } from "@/app/actions/productActions.js";
+import { deleteProduct } from "@/app/serverActions/productActions.js";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 
 const ProductsPage = async ({ searchParams }) => {
