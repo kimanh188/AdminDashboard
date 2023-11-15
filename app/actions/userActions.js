@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache.js";
 import { redirect } from "next/navigation.js";
+import bcrypt from "bcrypt";
 import { mongoConnect } from "../config/db.connect.js";
 import { UserModel } from "../models/users.model.js";
 
@@ -12,10 +13,14 @@ export const addUser = async (formAddNewUser) => {
   try {
     mongoConnect();
 
+    //hash password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
     const newUser = new UserModel({
       username,
       email,
-      password,
+      password: hashedPassword,
       phone,
       address,
       isAdmin,
