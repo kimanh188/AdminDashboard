@@ -8,7 +8,9 @@ const Pagination = ({ count }) => {
   const searchParams = useSearchParams();
 
   const page = searchParams.get("page") || 1;
+
   const resultPerPage = 5;
+  const totalPages = Math.ceil(count / resultPerPage);
 
   const params = new URLSearchParams(searchParams);
 
@@ -32,6 +34,9 @@ const Pagination = ({ count }) => {
       >
         Previous
       </button>
+      <div className={styles.page}>
+        Page {page} of {totalPages}
+      </div>
       <button
         className={styles.button}
         disabled={!hasNext}

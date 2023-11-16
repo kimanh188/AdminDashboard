@@ -5,16 +5,16 @@
 }
 
 :root {
-  --bg: #192655;
-  --bgSoft: #3876bf;
+  --bg: #212121;
+  --bgSoft: #323232;
   --text: #f3f0ca;
-  --textSoft: #f3f3f3;
-  --bg-navbar-hover: #39a7ff;
-  --btn-add: #655dbb;
+  --textSoft: #14ffec;
+  --bg-navbar-hover: #2e97a7;
+  --btn-add: #9e6f21;
   --green: #1b9c85;
   --yellow: #cfb997;
   --red: #f05941;
-  --dark-grey: #2e374a;
+  --dark-grey: #4d455d;
 }
 
 body {

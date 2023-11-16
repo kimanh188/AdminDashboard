@@ -1,9 +1,5 @@
-.container {
-  position: fixed;
-}
-
 .item {
-  background: linear-gradient(to top, #192655, #4f709c);
+  background: linear-gradient(to top, #3c2317, #395b64);
   padding: 1.25rem 1.5rem;
   border-radius: 10px;
   margin-bottom: 1.25rem;
@@ -22,10 +18,16 @@
   object-fit: cover;
   opacity: 0.3;
 }
+.title {
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
 
 .text {
   display: flex;
   flex-direction: column;
+
   gap: 1.5rem;
 }
 
@@ -40,8 +42,9 @@
 }
 
 .desc {
-  color: var(--textSoft);
+  color: var(--text);
   font-size: 0.875rem;
+  text-align: justify;
 }
 
 .button {
@@ -50,7 +53,7 @@
   align-items: center;
   gap: 10px;
   width: max-content;
-  background-color: #5d57c9;
+  background-color: var(--bg-navbar-hover);
   color: white;
   border: none;
   border-radius: 5px;

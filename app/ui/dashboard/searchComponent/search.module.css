@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: var(--dark-grey);
+  background-color: var(--bg);
   padding: 10px;
   border-radius: 10px;
   width: max-content;

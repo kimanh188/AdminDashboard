@@ -1,4 +1,7 @@
-import Card from "../ui/dashboard/cardComponent/card.jsx";
+import {
+  CardTotalUser,
+  CardMonthlyRevenue,
+} from "../ui/dashboard/cardComponent/card.jsx";
 import Transactions from "../ui/dashboard/transactions/transactions.jsx";
 import Chart from "../ui/dashboard/chartComponent/chart.jsx";
 import NewsSidebar from "../ui/dashboard/news-sidebarComponent/newsSidebar.jsx";
@@ -9,8 +12,8 @@ const DashboardPage = () => {
     <div className={styles.wrapper}>
       <div className={styles.main}>
         <div className={styles.cards}>
-          <Card />
-          <Card />
+          <CardTotalUser />
+          <CardMonthlyRevenue />
         </div>
         <Transactions />
         <Chart />

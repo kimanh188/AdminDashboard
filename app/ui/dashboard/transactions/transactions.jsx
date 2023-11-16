@@ -25,7 +25,7 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImg}
                 />
-                John Doe
+                Karen
               </div>
             </td>
             <td>
@@ -33,39 +33,39 @@ const Transactions = () => {
                 Pending
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>14.11.2023</td>
+            <td>$980</td>
           </tr>
           <tr>
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src="https://images.unsplash.com/photo-1664985363388-0e4bd2b5cdb6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D"
                   alt=""
                   width={40}
                   height={40}
                   className={styles.userImg}
                 />
-                John Doe
+                Horace
               </div>
             </td>
             <td>
               <span className={`${styles.status} ${styles.done}`}>Done</span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>11.11.2023</td>
+            <td>$1.200</td>
           </tr>
           <tr>
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src="https://picsum.photos/seed/ZgsaCy8/640/480"
                   alt=""
                   width={40}
                   height={40}
                   className={styles.userImg}
                 />
-                John Doe
+                Mildred Greenholt
               </div>
             </td>
             <td>
@@ -73,29 +73,27 @@ const Transactions = () => {
                 Cancelled
               </span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>11.11.2023</td>
+            <td>$320</td>
           </tr>
           <tr>
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src="https://plus.unsplash.com/premium_photo-1699796414302-b34941b175ec?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5N3x8fGVufDB8fHx8fA%3D%3D"
                   alt=""
                   width={40}
                   height={40}
                   className={styles.userImg}
                 />
-                John Doe
+                testUserAction
               </div>
             </td>
             <td>
-              <span className={`${styles.status} ${styles.pending}`}>
-                Pending
-              </span>
+              <span className={`${styles.status} ${styles.done}`}>Done</span>
             </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>10.11.2023</td>
+            <td>$510</td>
           </tr>
         </tbody>
       </table>
