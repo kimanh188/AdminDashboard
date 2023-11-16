@@ -4,14 +4,10 @@ config({ path: "../../config.env" });
 
 const connection = {};
 
-console.log(process.env.CONNECTION_STRING);
-
 export const mongoConnect = async () => {
   try {
     if (connection.isConnected) return;
-    const db = await mongoose.connect(
-      "mongodb+srv://testUser:test12345@cluster0.djgqpk3.mongodb.net/dashboard?retryWrites=true&w=majority"
-    );
+    const db = await mongoose.connect(process.env.CONNECTION_STRING);
     connection.isConnected = db.connections[0].readyState;
     /* readyStates:
     0: disconnected
