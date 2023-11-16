@@ -2,7 +2,7 @@
 
 import { signIn } from "../auth.js";
 
-export const authenticateLogin = async (prevState, formData) => {
+export const authenticateLogin = async (previousState, formData) => {
   const { username, password } = Object.fromEntries(formData);
 
   try {

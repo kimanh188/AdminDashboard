@@ -5,19 +5,31 @@ import { authConfig } from "./auth.config.js";
 import { mongoConnect } from "./config/db.connect.js";
 import { UserModel } from "./models/users.model.js";
 
+function comparePasswords(plainTextPassword, storedPlainTextPassword) {
+  // Perform a simple string comparison
+  return plainTextPassword === storedPlainTextPassword;
+}
+
 const login = async (credentials) => {
   try {
-    mongoConnect();
+    await mongoConnect();
     const user = await UserModel.findOne({ username: credentials.username });
 
-    if (!user || !user.isAdmin) throw new Error("Wrong credentials");
+    if (!user || !user.isAdmin)
+      throw new Error("Wrong credentials: User not found or not an admin");
 
-    const isPasswordCorrect = await bcrypt.compare(
+    // Example usage
+    const isPasswordCorrect = comparePasswords(
       credentials.password,
       user.password
     );
+    /*  const isPasswordCorrect = await bcrypt.compare(
+      credentials.password,
+      user.password
+    ); */
 
-    if (!isPasswordCorrect) throw new Error("Wrong credentials");
+    if (!isPasswordCorrect)
+      throw new Error("Wrong credentials: Incorrect password");
 
     return user;
   } catch (error) {
