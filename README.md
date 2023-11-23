@@ -6,20 +6,6 @@ _Work in Progress_
 
 This Admin Dashboard project is a Next.js application that provides a user-friendly interface for managing users and products. It was developed as a self-learning exercise to gain hands-on experience with Next.js.
 
-## Learning Highlights
-
-Some examples of what I learnt through this project:
-
-- **Manipulating Query Parameters:** Utilized Next.js hooks, including usePathname and useSearchParams, for efficient manipulation of query parameters.
-
-- **Debouncing Search Functionality:** Employed the useDebouncedCallback hook from the use-debounce library to debounce search functionality, preventing that the search function will not be fired too often and ensuring a smoother user experience.
-
-- **Password Hashing:** Implemented password hashing using the bcrypt library, enhancing the security of user authentication.
-
-- **NextAuth.js Integration:** Leveraged NextAuth.js for authentication processes, providing secure access to admin functionalities.
-
-- **Mongoose Practice:** Deepened understanding of MongoDB interactions by practicing with Mongoose.
-
 ## Key Features
 
 The Admin Dashboard offers the following features:
@@ -28,23 +14,14 @@ The Admin Dashboard offers the following features:
 
 - **Dashboard Homepage:** Comprehensive display of admin dashboard.
 
-- **User Management:** Efficient user management capabilities, including:
+- **User and Product Management:** Efficient users and products management functionalities, including
 
-  - Displaying a user list
-  - Searching for specific users
-  - Viewing user details
-  - Adding new users
-  - Editing user information
-  - Deleting users
-
-- **Product Management:** Efficient product management functionalities, encompassing:
-
-  - Displaying a product list
-  - Searching for specific products
-  - Viewing product details
-  - Adding new products
-  - Editing product information
-  - Deleting products
+  - Displaying user/product list
+  - Searching for specific users/products
+  - Viewing user/product details
+  - Adding new users/products
+  - Editing user/product information
+  - Deleting users/products
 
 - **Server Actions:** Implement server-side actions for data manipulation.
 
@@ -77,6 +54,20 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Learning Highlights
+
+Some examples of what I learnt through this project:
+
+- **Manipulating Query Parameters:** Utilized Next.js hooks, including usePathname and useSearchParams, for efficient manipulation of query parameters.
+
+- **Debouncing Search Functionality:** Employed the useDebouncedCallback hook from the use-debounce library to debounce search functionality, preventing that the search function will not be fired too often and ensuring a smoother user experience.
+
+- **Password Hashing:** Implemented password hashing using the bcrypt library, enhancing the security of user authentication.
+
+- **NextAuth.js Integration:** Leveraged NextAuth.js for authentication processes, providing secure access to admin functionalities.
+
+- **Mongoose Practice:** Deepened understanding of MongoDB interactions by practicing with Mongoose.
 
 ## Tutorial Source & Customized Features
 
