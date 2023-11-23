@@ -56,18 +56,6 @@ The Admin Dashboard offers the following features:
 - bcryptjs: Password hashing library
 - faker-js: Data generation library
 
-## Tutorial Source & Customized Features
-
-This project was developed following the tutorial from the [Lama Dev](https://www.youtube.com/watch?v=cBg6xA5C60s&t=215s&ab_channel=LamaDev) YouTube channel as part of my self-learning journey. While the project's design and structure closely follow the tutorial, I've made several modifications and additions:
-
-- **Folder Structure:** Reorganized project folder structure
-
-- **Data Generation:** Used faker-js package to generate user and product data for testing purposes.
-
-- **Homepage Configuration:** Set login page as the default homepage.
-
-- **Pagination Customization:** Tailored pagination with page number display.
-
 ## Getting Started
 
 **Access the Live Site**
@@ -90,15 +78,14 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tutorial Source & Customized Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project was developed following the tutorial from the [Lama Dev](https://www.youtube.com/watch?v=cBg6xA5C60s&t=215s&ab_channel=LamaDev) YouTube channel as part of my self-learning journey. While the project's design and structure closely follow the tutorial, I've made several modifications and additions:
 
-## Learn More
+- **Folder Structure:** Reorganized project folder structure
 
-To learn more about Next.js, take a look at the following resources:
+- **Data Generation:** Used faker-js package to generate user and product data for testing purposes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Homepage Configuration:** Set login page as the default homepage.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Pagination Customization:** Tailored pagination with page number display.
