@@ -41,7 +41,7 @@ You can view my deployed version of the Admin Dashboard at this [Live Site](http
 - _Username:_ testAdmin
 - _Password:_ test12345
 
-**Run the Development Server:**
+**Or, run the Development Server:**
 
 ```bash
 npm run dev
