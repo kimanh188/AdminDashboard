@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import bcrypt from "bcrypt";
+//import bcrypt from "bcrypt";
 import { authConfig } from "./auth.config.js";
 import { mongoConnect } from "./config/db.connect.js";
 import { UserModel } from "./models/users.model.js";
@@ -15,10 +15,10 @@ const login = async (credentials) => {
     await mongoConnect();
     const user = await UserModel.findOne({ username: credentials.username });
 
-    if (!user || !user.isAdmin)
+    if (!user || !user.isAdmin) {
       throw new Error("Wrong credentials: User not found or not an admin");
+    }
 
-    // Example usage
     const isPasswordCorrect = comparePasswords(
       credentials.password,
       user.password
@@ -28,8 +28,9 @@ const login = async (credentials) => {
       user.password
     ); */
 
-    if (!isPasswordCorrect)
+    if (!isPasswordCorrect) {
       throw new Error("Wrong credentials: Incorrect password");
+    }
 
     return user;
   } catch (error) {
