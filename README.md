@@ -35,13 +35,13 @@ The Admin Dashboard offers the following features:
 
 ## Getting Started
 
-**Access the Live Site**
+**Access the Live Site:**
 You can view my deployed version of the Admin Dashboard at this [Live Site](https://admin-dashboard-nine-lilac.vercel.app/). To log in, use the following credentials:
 
-Username: testAdmin
-Password: test12345
+- _Username:_ testAdmin
+- _Password:_ test12345
 
-**Run the Development Server**
+**Run the Development Server:**
 
 ```bash
 npm run dev
