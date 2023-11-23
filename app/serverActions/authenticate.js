@@ -2,13 +2,13 @@
 
 import { signIn } from "../auth.js";
 
-export const authenticateLogin = async (previousState, formData) => {
+export const authenticateLogin = async (formData) => {
   const { username, password } = Object.fromEntries(formData);
 
   try {
     await signIn("credentials", { username, password });
   } catch (error) {
     console.log(error);
-    return "Wrong credentials";
+    throw error;
   }
 };
